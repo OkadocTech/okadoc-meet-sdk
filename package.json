@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-okadoc-meet",
+  "version": "0.1.0",
+  "description": "Okadoc Meet iOS SDK for Telemedicine.",
+  "cordova": {
+    "id": "cordova-plugin-okadoc-meet",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Okadoc Tech",
+  "license": "Apache 2"
+}

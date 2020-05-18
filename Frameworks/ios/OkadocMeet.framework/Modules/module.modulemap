@@ -1,0 +1,11 @@
+framework module OkadocMeet {
+  umbrella header "OkadocMeet.h"
+
+  export *
+  module * { export * }
+}
+
+module OkadocMeet.Swift {
+    header "OkadocMeet-Swift.h"
+    requires objc
+}

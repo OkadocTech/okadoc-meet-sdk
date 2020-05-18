@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id='cordova-plugin-okadoc-meet' version='0.1.0' 
+	xmlns='http://apache.org/cordova/ns/plugins/1.0' 
+	xmlns:android='http://schemas.android.com/apk/res/android'>
+	<name>OkadocMeetPlugin</name>
+	<js-module name='OkadocPlugin' src='www/OkadocPlugin.js'>
+		<clobbers target='window.plugins.OkadocMeetPlugin' />
+	</js-module>
+
+	<platform name='android'>
+		<config-file parent='/*' target='res/xml/config.xml'>
+			<feature name='OkadocPlugin'>
+				<param name='android-package' value='com.cordova.plugin.okadoc.OkadocPlugin' />
+			</feature>
+		</config-file>
+		<config-file parent='/*' target='AndroidManifest.xml'>
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.BLUETOOTH" />
+			<uses-permission android:name="android.permission.CAMERA" />
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+			<uses-permission android:name="android.permission.RECORD_AUDIO" />
+			<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+			<uses-permission android:name="android.permission.WAKE_LOCK" />
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+		</config-file>
+		<source-file src='src/android/OkadocPlugin.java' target-dir='src/com/cordova/plugin/okadoc/' />
+		<framework src='src/android/OkadocPlugin.gradle' custom='true' type='gradleReference' />
+	</platform>
+
+	<!-- ios -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="OkadocPlugin">
+				<param name="ios-package" value="OkadocPlugin"/>
+			</feature>
+		</config-file>
+
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+			<string>This app needs access to the camera to take photos.</string>
+		</config-file>
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+			<string>This app needs access to the microphone to make voice call.</string>
+		</config-file>
+
+		<header-file src="src/ios/OkadocPlugin.h" />
+		<source-file src="src/ios/OkadocPlugin.m" />
+
+        <framework src="OkadocMeetSDK" type="podspec" spec=":git => 'https://github.com/OkadocTech/okadoc-meet-sdk', :tag => 'podspec'"/>
+	</platform>
+</plugin>
