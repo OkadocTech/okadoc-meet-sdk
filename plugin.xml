@@ -4,7 +4,7 @@
 	xmlns:android='http://schemas.android.com/apk/res/android'>
 	<name>OkadocMeetPlugin</name>
 	<js-module name='OkadocPlugin' src='www/OkadocPlugin.js'>
-		<clobbers target='window.plugins.OkadocMeetPlugin' />
+		<clobbers target='OkadocMeetPlugin' />
 	</js-module>
 
 	<platform name='android'>

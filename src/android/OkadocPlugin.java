@@ -148,7 +148,7 @@ public class OkadocPlugin extends CordovaPlugin implements OkadocMeetActivityInt
           .setRoom(url)
           .setUserInfo(userInfo)
           .setSubject("Telemedicine")
-          .setFeatureFlag("chat.enabled", false)
+          .setFeatureFlag("chat.enabled", true)
           .setFeatureFlag("invite.enabled", false)          
           .setFeatureFlag("calendar.enabled", false)
           .setWelcomePageEnabled(false)
