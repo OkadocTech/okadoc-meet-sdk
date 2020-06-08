@@ -18,6 +18,8 @@
 #import <OkadocMeet/OkadocMeetView.h>
 #import <OkadocMeet/OkadocMeetViewDelegate.h>
 #import <OkadocMeet/OkadocMeetConferenceOptions.h>
+#import <OkadocMeet/OkadocMeetLogger.h>
+#import <OkadocMeet/OkadocMeetBaseLogHandler.h>
 
 
 @interface OkadocMeet : NSObject
@@ -35,14 +37,13 @@
  * List of domains used for universal linking.
  */
 @property (copy, nonatomic, nullable) NSArray<NSString *> *universalLinkDomains;
-
 /**
  * Default conference options used for all conferences. These options will be merged
  * with those passed to OkadocMeetView.join when joining a conference.
  */
 @property (nonatomic, nullable) OkadocMeetConferenceOptions *defaultConferenceOptions;
 
-#pragma mak - This class is a singleton
+#pragma mark - This class is a singleton
 
 + (instancetype _Nonnull)sharedInstance;
 
