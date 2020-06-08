@@ -46,6 +46,10 @@
 		<header-file src="src/ios/OkadocPlugin.h" />
 		<source-file src="src/ios/OkadocPlugin.m" />
 
-        <framework src="OkadocMeetSDK" type="podspec" spec=":git => 'https://github.com/OkadocTech/okadoc-meet-sdk', :tag => 'podspec'"/>
+        <!-- <framework src="OkadocMeetSDK" type="podspec" spec=":git => 'https://github.com/OkadocTech/okadoc-meet-sdk', :tag => 'podspec'"/> -->
+        <source-file src="./Frameworks/ios/OkadocMeet.framework" target-dir="lib" framework="true" />
+		<source-file src="./Frameworks/ios/WebRTC.framework" target-dir="lib" framework="true" />
+		<framework src="./Frameworks/ios/OkadocMeet.framework" custom="true" embed="true" />
+		<framework src="./Frameworks/ios/WebRTC.framework" custom="true" embed="true" />
 	</platform>
 </plugin>
