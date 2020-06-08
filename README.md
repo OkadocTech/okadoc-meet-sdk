@@ -43,4 +43,4 @@ inAppBrowserRef.addEventListener('message', messageCallBack);
 ```
 * Click Done
 * Publish and build your app
-* You can check the example on this folder ```Outsystems/OkadocDemo.oml```
+* You can check the example on this folder ```Outsystems/OkadocVideoConsultation.oml```
