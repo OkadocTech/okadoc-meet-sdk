@@ -7,14 +7,24 @@ Instructions to use okadoc meet
 * Outsystem Service studio 11
 * Minimum iOS Target Version **10.0**
 * Minimum Android SDK Version **21**
+* [Outsystems template plugin](https://www.outsystems.com/forge/component-overview/1676/template-plugin)
+
 
 ### Outsystem - Setup and Running
 
 #### 1. Setup the Plugin/Forge
-* You need download the Plugin/Forge in folder on this repo
+* You need create custom outsystems plugin for using this cordova plugin
+Download the Template Plugin from the [Forge](https://www.outsystems.com/forge/component-overview/1676/template-plugin). After you’ve downloaded the plugin to your environment, open the Template_Plugin module, click the Module menu item, and then select Clone.
+
+* Change the module configurations, like:
+```Module Name```
+```Module Client Actions```
+```Module Extensibility configuration```
+```Module Diagram```
+
+* you must setup configuration match with the sample module in folder on this repo
 ```Outsystems/OkadocMeetPlugin.oml```
-* open with
-```Outsystem Service Studio 11```
+
 * click publish **(F5)**
 
 #### 2. Open your project
