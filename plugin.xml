@@ -24,7 +24,6 @@
 			<uses-permission android:name="android.permission.WAKE_LOCK" />
 			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 		</config-file>
-        <hook type="before_plugin_install" src="hooks/changeGradleProperties.js" />
 		<source-file src='src/android/OkadocPlugin.java' target-dir='src/com/cordova/plugin/okadoc/' />
 		<framework src='src/android/OkadocPlugin.gradle' custom='true' type='gradleReference' />
 	</platform>
