@@ -13,6 +13,14 @@
 				<param name='android-package' value='com.cordova.plugin.okadoc.OkadocPlugin' />
 			</feature>
 		</config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation" 
+                android:launchMode="singleTask" 
+                android:name="com.cordova.plugin.okadoc.OkadocActivity" 
+                android:resizeableActivity="true" 
+                android:supportsPictureInPicture="true" 
+                android:theme="@style/Theme.Design.NoActionBar" />
+        </config-file>
 		<config-file parent='/*' target='AndroidManifest.xml'>
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 			<uses-permission android:name="android.permission.BLUETOOTH" />
@@ -25,6 +33,8 @@
 			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 		</config-file>
 		<source-file src='src/android/OkadocPlugin.java' target-dir='src/com/cordova/plugin/okadoc/' />
+		<source-file src='src/android/OkadocBroadcastReceiver.java' target-dir='src/com/cordova/plugin/okadoc/' />
+		<source-file src='src/android/OkadocActivity.java' target-dir='src/com/cordova/plugin/okadoc/' />
 		<framework src='src/android/OkadocPlugin.gradle' custom='true' type='gradleReference' />
 	</platform>
 

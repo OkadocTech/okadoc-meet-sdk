@@ -40,14 +40,11 @@ android {
     	}
 }
 dependencies {
-//org.okadoc.react:okadoc-meet-sdk:2.+ org.okadoc.react:okadoc-meet-sdk:1.9.0@aar
 	compile  ('org.okadoc.react:okadoc-meet-sdk:2.+') {
 		transitive = true;
 	}
 
-	implementation "com.android.support:appcompat-v7:27.1.0"	
-	// implementation 'androidx.appcompat:appcompat:1.1.0'
-    // 	implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+	implementation "com.android.support:appcompat-v7:27.1.0"
 	compile  "com.android.support:appcompat-v7:27.1.0"
 	compile  "com.android.support:recyclerview-v7:27.1.0"
 	compile  "com.android.support:design:27.1.0"
