@@ -47,8 +47,11 @@
 		</config-file>
 
         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-			<string>This app needs access to the camera to take photos.</string>
-		</config-file>
+		<string>This app needs access to the camera to take photos.</string>
+	</config-file>
+	<config-file target="*-Info.plist" parent="NSCalendarsUsageDescription">
+		<string>This app needs to access calendar to show scheduled video call</string>
+	</config-file>
         <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
 			<string>This app needs access to the microphone to make voice call.</string>
 		</config-file>
