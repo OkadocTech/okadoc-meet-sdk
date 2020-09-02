@@ -23,6 +23,10 @@ const get = (obj, path, defaultValue = undefined) => {
 };
 
 exports.call = debounce(function(data, success, error) {
+    if ((data || '').toLowerCase().includes('close_browser')) {
+      success('CLOSE_BROWSER');
+    }
+
     if ((data || '').toLowerCase().includes('video_url')) {        
         const params = JSON.parse(data || '{}') || {};
         const url = get(params, 'meetUrl', '');
