@@ -1,12 +1,15 @@
-repositories{
-	jcenter()
-	maven {
-		url "https://github.com/OkadocTech/okadoc-meet-sdk/raw/master/Frameworks/android"
-	}
-	maven {
-		url "https://maven.google.com"
-	}
+allprojects {
+  repositories {
+    jcenter()
+    maven {
+      url "https://github.com/OkadocTech/okadoc-meet-sdk/raw/master/Frameworks/android"
+    }
+    maven {
+      url "https://maven.google.com"
+    }
+  }
 }
+
 android {
 	compileSdkVersion 26
     	buildToolsVersion "26.0.1"
