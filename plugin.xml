@@ -15,7 +15,7 @@
 			</feature>
 		</config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<application tools:replace="android:allowBackup" android:allowBackup="false">
+			<application android:allowBackup="false">
 				<activity android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
 					android:launchMode="singleTask"
 					android:name="com.cordova.plugin.okadoc.OkadocActivity"
