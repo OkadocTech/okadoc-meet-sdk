@@ -14,7 +14,8 @@
 			</feature>
 		</config-file>
 		<edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-			<application android:allowBackup="false"/>
+			<application android:allowBackup="false"
+				tools:replace="android:allowBackup" />
 		</edit-config>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
