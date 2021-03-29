@@ -8,6 +8,11 @@
 	</js-module>
 
 	<platform name='android'>
+		<edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+			<manifest xmlns:tools="http://schemas.android.com/tools" />
+			<application tools:replace="allowBackup"
+              android:allowBackup="false"/>
+		</edit-config>
 		<config-file parent='/*' target='res/xml/config.xml'>
 			<feature name='OkadocPlugin'>
 				<param name='android-package' value='com.cordova.plugin.okadoc.OkadocPlugin' />
