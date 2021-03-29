@@ -14,15 +14,16 @@
 				<param name='android-package' value='com.cordova.plugin.okadoc.OkadocPlugin' />
 			</feature>
 		</config-file>
+		<edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+			<application android:allowBackup="false" />
+		</edit-config>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<application android:allowBackup="false">
-				<activity android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-					android:launchMode="singleTask"
-					android:name="com.cordova.plugin.okadoc.OkadocActivity"
-					android:resizeableActivity="true"
-					android:supportsPictureInPicture="true"
-					android:theme="@style/Theme.Design.NoActionBar" />
-			</application>
+            <activity android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+                android:launchMode="singleTask"
+                android:name="com.cordova.plugin.okadoc.OkadocActivity"
+                android:resizeableActivity="true"
+                android:supportsPictureInPicture="true"
+                android:theme="@style/Theme.Design.NoActionBar" />
         </config-file>
 		<config-file parent='/*' target='AndroidManifest.xml'>
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
