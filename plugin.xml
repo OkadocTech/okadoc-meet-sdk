@@ -14,8 +14,8 @@
 				<param name='android-package' value='com.cordova.plugin.okadoc.OkadocPlugin' />
 			</feature>
 		</config-file>
-		<edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
-			<application android:allowBackup="false" />
+		<edit-config file="AndroidManifest.xml" mode="overwrite" target="/manifest/application">
+			<application tools:replace="android:allowBackup" android:allowBackup="false" />
 		</edit-config>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
